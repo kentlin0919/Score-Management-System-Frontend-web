@@ -1,9 +1,13 @@
 <script>
-import Nav from '../components/nav.vue'
-
+import  Nav  from '../components/nav.vue'
+import { login } from '../funtional/login';
 export default {
   components: {
     Nav
+  },
+  setup() {
+
+    
   }
 }
 </script>
@@ -14,6 +18,7 @@ export default {
   <div>
     
     <header class="sticky-top">
+      <Nav></Nav>
       <ul class="nav justify-content-center">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Active</a>
