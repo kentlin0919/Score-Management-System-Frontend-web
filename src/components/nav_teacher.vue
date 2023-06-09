@@ -21,10 +21,9 @@
 
   </script>
   
-  <style >
+  <style scoped>
 header {
   line-height: 2;
-  background-color: bisque;
   max-height: 100vh;
   width: 100%;
   position: fixed;

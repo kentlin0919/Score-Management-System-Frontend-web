@@ -2,16 +2,16 @@
     <header>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link active" aria-current="page" href="#">首頁</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">查詢</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">帳戶</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled">登出</a>
       </li>
     </ul>
 </header>
@@ -21,10 +21,9 @@
 
   </script>
   
-  <style >
+  <style scoped>
 header {
   line-height: 2;
-  background-color: bisque;
   max-height: 100vh;
   width: 100%;
   position: fixed;
