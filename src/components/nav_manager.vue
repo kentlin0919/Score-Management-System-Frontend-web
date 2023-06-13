@@ -2,16 +2,13 @@
     <header>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" type="button" @click="push">Active</a>
+        <RouterLink to="/register" class="nav-link active" aria-current="page" type="button" >註冊</RouterLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <RouterLink class="nav-link" to="/student">學生成績查詢</RouterLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <RouterLink class="nav-link" to="/">登出</RouterLink>
       </li>
     </ul>
 </header>

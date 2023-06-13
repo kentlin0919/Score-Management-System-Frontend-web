@@ -4,50 +4,29 @@
             <Nav></Nav>
         </header>
         <main>
-            <div class="view" >
-                <table>
-                    <tr>
-                        <td>
 
-                        </td>
-                    </tr>
-
-                </table>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">學生ID</span>
-                    <input type="text" class="form-control" placeholder="ID" aria-label="ID" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">國文</span>
-                    <input type="text" class="form-control" placeholder="score" aria-label="ID" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">英文</span>
-                    <input type="text" class="form-control" placeholder="score" aria-label="ID" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">數學</span>
-                    <input type="text" class="form-control" placeholder="score" aria-label="ID" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">社會</span>
-                    <input type="text" class="form-control" placeholder="score" aria-label="ID" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">自然</span>
-                    <input type="text" class="form-control" placeholder="score" aria-label="ID" aria-describedby="basic-addon1">
-                </div>
-            </div>
         </main>
     </div>
 </template>
 <script>
+import { RouterView,useRouter } from 'vue-router';
 import Nav from '../../components/nav_teacher.vue'
+import { cookie_teacher } from '../../funtional/teacher/cookie_teacher';
+import { ref,onMounted } from 'vue';
+import  VueCookies  from "vue-cookies"
 export default {
     components: {
         Nav
     },
     setup() {
+        const identity = ref(VueCookies.get('User'))
+        const router = useRouter();
+        onMounted(()=>{
+            cookie_teacher(router,identity.value)
+        });
+        return{
+            onMounted
+        }
 
     }
 }

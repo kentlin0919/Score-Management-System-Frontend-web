@@ -2,23 +2,20 @@
     <header>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+        <RouterLink class="nav-link" to="/student">成績單</RouterLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">查詢</a>
+        <RouterLink class="nav-link" to="/student_search">歷史查詢</RouterLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">帳戶</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">登出</a>
+        <RouterLink class="nav-link active" aria-current="page" to="/">登出</RouterLink>
       </li>
     </ul>
 </header>
   </template>
   
   <script setup>
-
+import { RouterLink } from 'vue-router';
   </script>
   
   <style scoped>
